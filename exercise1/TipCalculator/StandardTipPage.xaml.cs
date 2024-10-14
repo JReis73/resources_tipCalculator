@@ -1,3 +1,5 @@
+using System.Resources;
+
 namespace TipCalculator;
 
 public partial class StandardTipPage : ContentPage
@@ -27,24 +29,30 @@ public partial class StandardTipPage : ContentPage
 
     void OnLight(object sender, EventArgs e)
     {
-        LayoutRoot.BackgroundColor = colorSilver;
+        //LayoutRoot.BackgroundColor = colorSilver;
 
-        tipLabel.TextColor = colorNavy;
-        billLabel.TextColor = colorNavy;
-        totalLabel.TextColor = colorNavy;
-        tipOutput.TextColor = colorNavy;
-        totalOutput.TextColor = colorNavy;
+        //tipLabel.TextColor = colorNavy;
+        //billLabel.TextColor = colorNavy;
+        //totalLabel.TextColor = colorNavy;
+        //tipOutput.TextColor = colorNavy;
+        //totalOutput.TextColor = colorNavy;
+
+        Resources["fgColor"] = colorNavy;
+        Resources["bgColor"] = colorSilver;
     }
 
     void OnDark(object sender, EventArgs e)
     {
-        LayoutRoot.BackgroundColor = colorNavy;
+        //LayoutRoot.BackgroundColor = colorNavy;
 
-        tipLabel.TextColor = colorSilver;
-        billLabel.TextColor = colorSilver;
-        totalLabel.TextColor = colorSilver;
-        tipOutput.TextColor = colorSilver;
-        totalOutput.TextColor = colorSilver;
+        //tipLabel.TextColor = colorSilver;
+        //billLabel.TextColor = colorSilver;
+        //totalLabel.TextColor = colorSilver;
+        //tipOutput.TextColor = colorSilver;
+        //totalOutput.TextColor = colorSilver;
+
+        Resources["fgColor"] = colorSilver;
+        Resources["bgColor"] = colorNavy;
     }
 
     async void GotoCustom(object sender, EventArgs e)
